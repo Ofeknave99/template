@@ -6,7 +6,7 @@ const CustomersTable = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterPlan, setFilterPlan] = useState('');
 
-  // פונקציה לסינון לקוחות על פי חיפוש
+  // פונקציה לסינון לקוחות לפי חיפוש
   const searchCustomers = (searchTerm) => {
     setSearchTerm(searchTerm);
     const filteredCustomers = customersData.filter((customer) =>
@@ -16,7 +16,7 @@ const CustomersTable = () => {
     setCustomers(filteredCustomers);
   };
 
-  // פונקציה לסינון לקוחות על פי תוכנית
+  // פונקציה לסינון לקוחות לפי תוכנית
   const filterByPlan = (plan) => {
     setFilterPlan(plan);
     const filteredCustomers = customersData.filter((customer) =>
@@ -65,9 +65,9 @@ const CustomersTable = () => {
         onChange={(e) => filterByPlan(e.target.value)}
       >
         <option value="">הכל</option>
-        <option value="light">תוכנית 1</option>
-        <option value="care">תוכנית 2</option>
-        <option value="navigate">תוכנית 3</option>
+        <option value="light">light</option>
+        <option value="care">care</option>
+        <option value="navigate">navigate</option>
       </select>
       <button onClick={exportToCSV}>ייצוא ל-CSV</button>
       {/* טופס להוספת לקוח חדש */}
@@ -77,9 +77,9 @@ const CustomersTable = () => {
         <input type="text" name="phone" placeholder="טלפון" />
         <select name="plan">
           <option value="">הכל</option>
-          <option value="light">תוכנית 1</option>
-          <option value="care">תוכנית 2</option>
-          <option value="navigate">תוכנית 3</option>
+          <option value="light">light</option>
+          <option value="care">care</option>
+          <option value="navigate">navigate</option>
         </select>
         <button type="submit">הוספת לקוח</button>
       </form>
